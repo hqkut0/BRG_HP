@@ -149,6 +149,22 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('menu text assignment skipped:', e);
   }
 
+  try {
+    const streamerEl = document.getElementById("dept-streamer");
+    if (streamerEl && typeof ROLE_STREAMER !== 'undefined') streamerEl.textContent = ROLE_STREAMER;
+
+    const engineerEl = document.getElementById("dept-engineer");
+    if (engineerEl && typeof ROLE_ENGINEER !== 'undefined') engineerEl.textContent = ROLE_ENGINEER;
+
+    const plannerEl = document.getElementById("dept-planner");
+    if (plannerEl && typeof ROLE_PLANNER !== 'undefined') plannerEl.textContent = ROLE_PLANNER;
+
+    const managerEl = document.getElementById("dept-manager");
+    if (managerEl && typeof ROLE_MANAGER !== 'undefined') managerEl.textContent = ROLE_MANAGER;
+  } catch (e) {
+    console.warn('department nav text assignment skipped:', e);
+  }
+
   // --- ここが重要：.streamer に部門名を入れる（ROLE_STREAMER があればそれを使う） ---
   const streamerText = (typeof ROLE_STREAMER !== 'undefined') ? ROLE_STREAMER : 'ストリーマー部門';
   document.querySelectorAll('.streamer').forEach(elem => { elem.textContent = streamerText; });
