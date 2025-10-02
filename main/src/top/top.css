@@ -1,0 +1,64 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(0.5em, 2.5vw, 0.8em);
+    /* 上下余白をさらに減らす */
+}
+
+header .logo {
+    width: clamp(100px, 35vw, 150px);
+    /* ロゴをさらに小さめに調整 */
+    height: auto;
+    margin-bottom: clamp(0.2em, 1.5vw, 0.4em);
+    /* タイトルとの間隔も縮小 */
+}
+
+header h2 {
+    font-size: clamp(1.1em, 4vw, 1.4em);
+    /* タイトルサイズも少し縮小 */
+    margin: 0;
+}
+
+nav {
+    background-color: #555;
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+main {
+    flex: 1;
+    /* 画面の残り高さを埋める */
+    padding: 2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}

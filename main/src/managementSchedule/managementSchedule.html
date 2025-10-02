@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>スケジュール管理</title>
+    <link rel="stylesheet" href="managementSchedule.css">
+    <script src="managementSchedule.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>スケジュール管理</h1>
+        <nav>
+            <a href="../top/top.html">TOP</a>
+            <a href="../managementUser/managementUser.html">ユーザー管理</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- カレンダー上部ヘッダー -->
+        <div class="calendar-header">
+            <button onclick="prevMonth()">◀</button>
+            <span id="calendar-title"></span>
+            <button onclick="nextMonth()">▶</button>
+            <select id="user-dropdown" onchange="changeUser(this.value)"></select>
+        </div>
+
+        <!-- カレンダー -->
+        <div class="calendar-container">
+            <table id="calendar"></table>
+        </div>
+
+        <!-- CSV / 印刷 -->
+        <div class="calendar-footer">
+            <button onclick="exportCSV()">CSV出力</button>
+            <button onclick="printView()">印刷</button>
+        </div>
+
+        <!-- ユーザー一覧（小型化 & 展開可能） -->
+        <div class="card" id="user-list-card">
+            <h2>ユーザー一覧</h2>
+            <button onclick="toggleUserList()">展開/折りたたみ</button>
+            <div id="user-list-panel" style="display:none; margin-top:5px;">
+                <ul id="user-list"></ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 スケジュール管理</p>
+    </footer>
+
+    <!-- ローカルストレージパネル -->
+    <div id="storage-panel" class="minimized">
+        <div id="storage-toggle">⚙️</div>
+        <div id="storage-content">
+            <h3>ローカルストレージ</h3>
+            <textarea id="storage-data" readonly></textarea>
+            <button onclick="clearStorage()">全削除</button>
+            <button onclick="refreshStorage()">更新</button>
+        </div>
+    </div>
+</body>
+
+</html>

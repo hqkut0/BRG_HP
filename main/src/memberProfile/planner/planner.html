@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プロフィールスライダー</title>
+  <link rel="stylesheet" href="../memberProfile.css">
+  <script src="../../../main.js" defer></script>
+  <script src="../memberProfile.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="../../../img/BondRingage-LOGO.png" alt="BondRingage ロゴ" class="logo">
+    <h2>BondRingage</h2>
+  </header>
+
+    <nav class="main-nav">
+        <a href="../../managementSchedule/managementSchedule.html" id="schedule"></a>
+        <a href="../../managementUser/managementUser.html" id="user"></a>
+        <a href="../../memberProfile/manager/manager.html" id="member"></a>
+    </nav>
+
+<nav class="department-nav">
+  <a href="../streamer/streamer.html" class="dept">ストリーマー部門</a>
+  <a href="../engineer/engineer.html" class="dept">技術部門</a>
+  <a href="../planner/planner.html" class="dept">企画部門</a>
+  <a href="../manager/manager.html" class="dept">運営</a>
+</nav>
+
+  <div class="thumbnail-bar">
+    <img src="../manager/img/hakuto_2.png" class="thumbnail active" data-index="0" />
+    <img src="../manager/img/kenken.png" class="thumbnail" data-index="1" />
+  </div>
+
+  <div class="main">
+    <div class="nav left">&#10094;</div>
+    <div class="nav right">&#10095;</div>
+
+    <div class="profile active">
+      <img src="../manager/img/hakuto_2.png" class="avatar" data-large="../manager/img/hakuto.png"/>
+      <div class="name">黒岩 白兎</div>
+      <div class="orner" id="orner"></div>
+    </div>
+    <div class="profile">
+      <img src="../manager/img/kenken.png" class="avatar" />
+      <div class="name">Kenken</div>
+      <div class="subOrner" id="subOrner"></div>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal-content">
+      <img src="" alt="拡大画像">
+      <div class="modal-name"></div>
+    </div>
+  </div>
+
+</body>
+</html>
