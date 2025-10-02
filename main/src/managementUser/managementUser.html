@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -47,3 +48,54 @@
   </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ユーザー管理</title>
+  <link rel="stylesheet" href="managementUser.css">
+  <script src="managementUser.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>ユーザー管理</h1>
+    <nav>
+      <a href="../top/top.html">トップ</a>
+      <a href="../managementSchedule/managementSchedule.html">カレンダー</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>ユーザー登録</h2>
+      <form onsubmit="addUser(event)">
+        <input type="text" id="username" placeholder="ユーザー名" required>
+        <input type="text" id="department" placeholder="所属部署" required>
+        <button type="submit">登録</button>
+      </form>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+      <h2>ユーザー一覧</h2>
+      <ul id="user-list"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 スケジュール管理</p>
+  </footer>
+
+  <!-- ローカルストレージパネル -->
+  <div id="storage-panel" class="minimized">
+    <div id="storage-toggle">⚙️</div>
+    <div id="storage-content">
+      <h3>ローカルストレージ</h3>
+      <textarea id="storage-data" readonly></textarea>
+      <button onclick="clearStorage()">全削除</button>
+      <button onclick="refreshStorage()">更新</button>
+    </div>
+  </div>
+</body>
+</html>
+>>>>>>> 941bed5 (first commit)

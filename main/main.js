@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ORNER = "オーナー";
 const SUB_ORNER = "サブオーナー";
 const ROLE_STREAMER = "ストリーマー部門";
@@ -7,3 +8,14 @@ const ROLE_ENGINEER = "技術部門";
 const SCHEDULE = "カレンダー";
 const MEMBER_PROFILE = "メンバー紹介";
 const USER = "ユーザー管理";
+=======
+const ORNER = "オーナー";
+const SUB_ORNER = "サブオーナー";
+const ROLE_STREAMER = "ストリーマー部門";
+const ROLE_MANAGER = "運営";
+const ROLE_PLANNER = "企画部門";
+const ROLE_ENGINEER = "技術部門";
+const SCHEDULE = "カレンダー";
+const MEMBER_PROFILE = "メンバー紹介";
+const USER = "ユーザー管理";
+>>>>>>> 941bed5 (first commit)
