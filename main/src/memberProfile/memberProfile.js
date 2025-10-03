@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data-highlight="${s.highlight || ''}"
           />
           <div class="name">${s.name}</div>
-          <div class="department">${roleName}</div>
+          <div class="department-id">${roleName}</div>
         `;
         mainDiv.appendChild(profile);
       });
