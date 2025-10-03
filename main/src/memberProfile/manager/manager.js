@@ -1,5 +1,5 @@
 // マネージャー情報を配列で定義
-const STREAMERS = [
+const MANAGERS = [
   {
     name: "黒岩 白兎",
     img: "hakuto_2.png",

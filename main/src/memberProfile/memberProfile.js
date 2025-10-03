@@ -2,10 +2,23 @@
 importScriptsIfNeeded();
 
 function importScriptsIfNeeded() {
-  // streamer.jsがまだ読み込まれていない場合は読み込む
-  if (typeof STREAMERS === "undefined") {
+  // ページごとに対応するJSを読み込む
+  const path = location.pathname;
+  let scriptPath = null;
+
+  if (path.includes('/manager/')) {
+    if (typeof MANAGERS === "undefined") scriptPath = "./manager.js";
+  } else if (path.includes('/streamer/')) {
+    if (typeof STREAMERS === "undefined") scriptPath = "./streamer.js";
+  } else if (path.includes('/engineer/')) {
+    if (typeof ENGINEERS === "undefined") scriptPath = "./engineer.js";
+  } else if (path.includes('/planner/')) {
+    if (typeof PLANNERS === "undefined") scriptPath = "./planner.js";
+  }
+
+  if (scriptPath) {
     const script = document.createElement("script");
-    script.src = "./streamer/streamer.js";
+    script.src = scriptPath;
     script.defer = true;
     document.head.appendChild(script);
   }
@@ -13,19 +26,31 @@ function importScriptsIfNeeded() {
 
 document.addEventListener('DOMContentLoaded', () => {
   // --- ストリーマー情報でHTML生成 ---
-  if (typeof STREAMERS !== "undefined") {
+  // STREAMERS配列がなければENGINEERSやMANAGERSなども参照
+  let members = typeof STREAMERS !== "undefined" ? STREAMERS :
+                typeof ENGINEERS !== "undefined" ? ENGINEERS :
+                typeof MANAGERS !== "undefined" ? MANAGERS :
+                typeof PLANNERS !== "undefined" ? PLANNERS : [];
+
+  // 部門名も自動判定
+  let roleName = typeof ROLE_STREAMER !== "undefined" ? ROLE_STREAMER :
+                 typeof ROLE_ENGINEER !== "undefined" ? ROLE_ENGINEER :
+                 typeof ROLE_MANAGER !== "undefined" ? ROLE_MANAGER :
+                 typeof ROLE_PLANNER !== "undefined" ? ROLE_PLANNER :
+                 "メンバー";
+
+  if (members.length) {
     const thumbnailBar = document.querySelector('.thumbnail-bar');
     const mainDiv = document.querySelector('.main');
     if (thumbnailBar && mainDiv) {
       // サムネイル生成
-      thumbnailBar.innerHTML = STREAMERS.map((s, i) =>
+      thumbnailBar.innerHTML = members.map((s, i) =>
         `<img src="./img/${s.img}" class="thumbnail${i === 0 ? ' active' : ''}" data-index="${i}" loading="lazy"/>`
       ).join('');
 
       // プロフィール生成
-      // 既存の .profile を全て削除
       mainDiv.querySelectorAll('.profile').forEach(e => e.remove());
-      STREAMERS.forEach((s, i) => {
+      members.forEach((s, i) => {
         const profile = document.createElement('div');
         profile.className = 'profile' + (i === 0 ? ' active' : '');
         profile.innerHTML = `
@@ -38,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data-highlight="${s.highlight || ''}"
           />
           <div class="name">${s.name}</div>
-          <div class="streamer"></div>
+          <div class="department">${roleName}</div>
         `;
         mainDiv.appendChild(profile);
       });
@@ -210,9 +235,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('department nav text assignment skipped:', e);
   }
 
-  // --- ここが重要：.streamer に部門名を入れる（ROLE_STREAMER があればそれを使う） ---
-  const streamerText = (typeof ROLE_STREAMER !== 'undefined') ? ROLE_STREAMER : 'ストリーマー部門';
-  document.querySelectorAll('.streamer').forEach(elem => { elem.textContent = streamerText; });
+  // --- ここが重要：.department に部門名を入れる ---
+  document.querySelectorAll('.department').forEach(elem => { elem.textContent = roleName; });
 
   // 最初の表示を確実に反映
   showProfile(currentIndex);

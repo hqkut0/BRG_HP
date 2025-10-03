@@ -6,6 +6,7 @@
   <title>プロフィールスライダー</title>
   <link rel="stylesheet" href="../memberProfile.css">
   <script src="../../../main.js" defer></script>
+  <script src="engineer.js" defer></script>
   <script src="../memberProfile.js" defer></script>
 </head>
 <body>
@@ -14,78 +15,25 @@
     <h2>BondRingage</h2>
   </header>
 
-    <nav class="main-nav">
-        <a href="../../managementSchedule/managementSchedule.html" id="schedule"></a>
-        <a href="../../managementUser/managementUser.html" id="user"></a>
-        <a href="../../memberProfile/manager/manager.html" id="member"></a>
-    </nav>
+  <nav class="main-nav">
+    <a href="../../managementSchedule/managementSchedule.html" id="schedule"></a>
+    <a href="../../managementUser/managementUser.html" id="user"></a>
+    <a href="../../memberProfile/manager/manager.html" id="member"></a>
+  </nav>
 
-<nav class="department-nav">
-  <a href="../streamer/streamer.html" class="dept" id="dept-streamer"></a>
-  <a href="../engineer/engineer.html" class="dept" id="dept-engineer"></a>
-  <a href="../planner/planner.html" class="dept" id="dept-planner"></a>
-  <a href="../manager/manager.html" class="dept" id="dept-manager"></a>
-</nav>
+  <nav class="department-nav">
+    <a href="../streamer/streamer.html" class="dept" id="dept-streamer"></a>
+    <a href="../engineer/engineer.html" class="dept" id="dept-engineer"></a>
+    <a href="../planner/planner.html" class="dept" id="dept-planner"></a>
+    <a href="../manager/manager.html" class="dept" id="dept-manager"></a>
+  </nav>
 
-  <div class="thumbnail-bar">
-    <img src="../engineer/img/irushion_2.png" class="thumbnail active" data-index="0" loading="lazy"/>
-    <img src="../engineer/img/aika.png" class="thumbnail" data-index="1" loading="lazy"/>
-    <img src="../engineer/img/uiha.png" class="thumbnail" data-index="2" loading="lazy"/>
-    <img src="../engineer/img/pochibotchi.png" class="thumbnail" data-index="3" loading="lazy"/>
-  </div>
+  <div class="thumbnail-bar"></div>
 
   <div class="main">
     <div class="nav left">&#10094;</div>
     <div class="nav right">&#10095;</div>
-
-    <div class="profile active">
-      <img src="../engineer/img/irushion_2.png" 
-          class="avatar" 
-          data-large="../engineer/img/irushion.png" 
-          data-youtube="https://www.youtube.com/@irushion" 
-          data-x="https://x.com/irushion"
-          data-highlight="https://www.youtube.com/watch?v=oc1SiZ91MS8"         
-      />
-      <div class="name">イルシオン</div>
-      <div class="engineer"></div>
-    </div>
-
-    <div class="profile">
-      <img src="../engineer/img/aika.png" 
-          class="avatar" 
-          data-large="../engineer/img/aika.png" 
-          data-youtube="https://www.youtube.com/@HaruTomi_AiYama_Lagerstatten" 
-          data-x="https://x.com/Aika_BRG_STRM"
-          data-highlight="https://www.youtube.com/watch?v=7mbJyRmmezU"         
-      />
-      <div class="name">春咲哀華</div>
-      <div class="engineer"></div>
-    </div>
-
-    <div class="profile">
-      <img src="../engineer/img/uiha.png" 
-          class="avatar" 
-          data-large="../engineer/img/uiha.png" 
-          data-youtube="https://www.youtube.com/@seele807" 
-          data-x="https://x.com/IQ300YukaS"
-          data-highlight="https://www.youtube.com/watch?v=Twy6guiYMv0"         
-      />
-      <div class="name">ういは</div>
-      <div class="engineer"></div>
-    </div>
-
-    <div class="profile">
-      <img src="../engineer/img/pochibotchi.png" 
-          class="avatar" 
-          data-large="../engineer/img/pochibotchi.png" 
-          data-youtube="https://www.youtube.com/@pochibotchi4296" 
-          data-x="https://x.com/botchinoyukkuri/"
-          data-highlight="https://www.youtube.com/watch?v=2fCpd3pqiCs"         
-      />
-      <div class="name">ポチボッチ</div>
-      <div class="engineer"></div>
-    </div>
-
+    <!-- プロフィールはJSで生成 -->
   </div>
 
   <!-- モーダル -->
@@ -93,14 +41,10 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <img src="" alt="拡大画像" class="modal-avatar">
-      <!-- プロフィール情報 -->
       <div class="modal-info">
         <div class="modal-name"></div>
         <div class="modal-department"></div>
-        <div class="modal-links">
-          <!-- ここにJSでリンクが生成される -->
-        </div>
-        <!-- ハイライト動画埋め込み -->
+        <div class="modal-links"></div>
         <div class="modal-highlight">
           <iframe src="" frameborder="0"
             title="ハイライト動画"
@@ -111,6 +55,5 @@
       </div>
     </div>
   </div>
-
 </body>
 </html>
