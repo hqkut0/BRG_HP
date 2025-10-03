@@ -6,7 +6,8 @@ const STREAMERS = [
     large: "kurona.png",
     youtube: "https://www.youtube.com/@kurona05_ch",
     x: "https://x.com/kurona_kuro05",
-    highlight: "https://www.youtube.com/watch?v=aDtGPyxfnP0"
+    highlight: "https://www.youtube.com/watch?v=aDtGPyxfnP0",
+    departmentId: "streamer"
   },
   {
     name: "黎上ふう",
@@ -15,7 +16,8 @@ const STREAMERS = [
     youtube: "https://www.youtube.com/@Kurokami_Huu",
     twitch: "https://www.twitch.tv/huu_kuro",
     x: "https://x.com/huu_kuro",
-    highlight: "https://www.youtube.com/watch?v=Elbo4kuXkUE"
+    highlight: "https://www.youtube.com/watch?v=Elbo4kuXkUE",
+    departmentId: "streamer"
   },
   {
     name: "胡蝶かすみ",
@@ -23,7 +25,8 @@ const STREAMERS = [
     large: "kasumi.png",
     youtube: "https://www.youtube.com/@kasumiV0111",
     x: "https://x.com/K_kasumiV",
-    highlight: "https://www.youtube.com/watch?v=GjYcQflo59Q"
+    highlight: "https://www.youtube.com/watch?v=GjYcQflo59Q",
+    departmentId: "streamer"
   },
   {
     name: "拓磨悠斗",
@@ -32,7 +35,8 @@ const STREAMERS = [
     youtube: "https://www.youtube.com/@tact_ch4289",
     twitch: "https://www.twitch.tv/tact_ch",
     x: "https://x.com/tact_ch",
-    highlight: "https://www.youtube.com/watch?v=N12eVlcdM_I"
+    highlight: "https://www.youtube.com/watch?v=N12eVlcdM_I",
+    departmentId: "streamer"
   },
   {
     name: "弦巻バネ",
@@ -41,7 +45,8 @@ const STREAMERS = [
     youtube: "https://www.youtube.com/@%E5%BC%A6%E5%B7%BB%E3%83%90%E3%83%8D",
     twitch: "https://www.twitch.tv/helical_spring",
     x: "https://x.com/Helical_Spring",
-    highlight: "https://www.youtube.com/watch?v=twTsbkUDTz4"
+    highlight: "https://www.youtube.com/watch?v=twTsbkUDTz4",
+    departmentId: "streamer"
   },
   {
     name: "Neiro",
@@ -50,7 +55,8 @@ const STREAMERS = [
     youtube: "https://www.youtube.com/@neiro9909",
     twitch: "https://www.twitch.tv/neiro_zzz",
     x: "https://x.com/Neiro_Zzz",
-    highlight: "https://www.youtube.com/watch?v=GNvTr4YW4is"
+    highlight: "https://www.youtube.com/watch?v=GNvTr4YW4is",
+    departmentId: "streamer"
   },
   {
     name: "熊猫あき",
@@ -58,7 +64,8 @@ const STREAMERS = [
     large: "aki.png",
     youtube: "https://www.youtube.com/@p_aki1213",
     x: "https://x.com/p_aki1213",
-    highlight: "https://www.youtube.com/watch?v=EwSHsaQlANE"
+    highlight: "https://www.youtube.com/watch?v=EwSHsaQlANE",
+    departmentId: "streamer"
   },
   {
     name: "ルナール・エクシード",
@@ -66,7 +73,8 @@ const STREAMERS = [
     large: "xceed.png",
     youtube: "https://www.youtube.com/@Xceeds_ch",
     x: "https://x.com/Xceeds_ch",
-    highlight: "https://www.youtube.com/watch?v=sXE_QU01_ec"
+    highlight: "https://www.youtube.com/watch?v=sXE_QU01_ec",
+    departmentId: "streamer"
   },
   {
     name: "TaKa",
@@ -75,7 +83,8 @@ const STREAMERS = [
     youtube: "https://www.youtube.com/channel/UCqUAmosVvOiBINVg2kn2Zxw",
     twitch: "https://www.twitch.tv/taka_ch1",
     x: "https://x.com/TAKA_8235",
-    highlight: "https://www.youtube.com/watch?v=iA8GhqjXdVk"
+    highlight: "https://www.youtube.com/watch?v=iA8GhqjXdVk",
+    departmentId: "streamer"
   },
   {
     name: "すぅ",
@@ -83,7 +92,8 @@ const STREAMERS = [
     large: "suu.jpg",
     youtube: "https://www.youtube.com/@suu1833/featured",
     x: "https://x.com/suufishy",
-    highlight: "https://www.youtube.com/watch?v=DedMddZx4Rs"
+    highlight: "https://www.youtube.com/watch?v=DedMddZx4Rs",
+    departmentId: "streamer"
   },
   {
     name: "ともじう",
@@ -92,6 +102,7 @@ const STREAMERS = [
     youtube: "https://www.youtube.com/@%E3%81%A8%E3%82%82%E3%81%98%E3%81%86%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB",
     twitch: "https://www.twitch.tv/tomojiu",
     x: "https://x.com/apexplayertomo",
-    highlight: "https://www.youtube.com/watch?v=7t7cIMYdg9Q"
+    highlight: "https://www.youtube.com/watch?v=7t7cIMYdg9Q",
+    departmentId: "streamer"
   }
 ];

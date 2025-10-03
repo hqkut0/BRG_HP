@@ -6,7 +6,8 @@ const PLANNERS = [
     large: "takeru.png",
     youtube: "https://www.youtube.com/@Takeru_Matsusita",
     x: "https://x.com/M_Takeru0505",
-    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I"
+    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I",
+    departmentId: "planner"
   },
     {
     name: "龍黒野",
@@ -14,7 +15,8 @@ const PLANNERS = [
     large: "ryukurono.png",
     youtube: "https://www.youtube.com/@Takeru_Matsusita",
     x: "https://x.com/M_Takeru0505",
-    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I"
+    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I",
+    departmentId: "planner"
   },
   {
     name: "フォリウム",
@@ -22,7 +24,8 @@ const PLANNERS = [
     large: "forium.png",
     youtube: "https://www.youtube.com/@Takeru_Matsusita",
     x: "https://x.com/M_Takeru0505",
-    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I"
+    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I",
+    departmentId: "planner"
   },
   {
     name: "白銀琉杏",
@@ -30,7 +33,8 @@ const PLANNERS = [
     large: "ruan.png",
     youtube: "https://www.youtube.com/@Takeru_Matsusita",
     x: "https://x.com/M_Takeru0505",
-    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I"
+    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I",
+    departmentId: "planner"
   },
   {
     name: "じゅにあ",
@@ -38,7 +42,8 @@ const PLANNERS = [
     large: "junior.png",
     youtube: "https://www.youtube.com/@Takeru_Matsusita",
     x: "https://x.com/M_Takeru0505",
-    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I"
+    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I",
+    departmentId: "planner"
   },
   {
     name: "雀野琴香",
@@ -46,10 +51,8 @@ const PLANNERS = [
     large: "kotoka.png",
     youtube: "https://www.youtube.com/@Takeru_Matsusita",
     x: "https://x.com/M_Takeru0505",
-    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I"
+    highlight: "https://www.youtube.com/watch?v=W-RIzmOjh1I",
+    departmentId: "planner"
   },
 
 ];
-
-// ここでグローバルのROLE_PLANNERを上書き
-window.ROLE_PLANNER = PLANNERS;

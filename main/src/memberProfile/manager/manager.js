@@ -7,7 +7,8 @@ const MANAGERS = [
     youtube: "https://www.youtube.com/@hakuto_snowlove",
     twitch: "https://www.twitch.tv/hakuto_kuro_vt",
     x: "https://x.com/hakuto_snowlove",
-    highlight: "https://www.youtube.com/watch?v=SO8Yd0D3GXo"
+    highlight: "https://www.youtube.com/watch?v=SO8Yd0D3GXo",
+    departmentId: "orner"
   },
   {
     name: "Kenken",
@@ -16,6 +17,7 @@ const MANAGERS = [
     youtube: "https://www.youtube.com/@ynkskenken2216",
     twitch: "https://www.twitch.tv/kenken_signal",
     x: "https://x.com/IgrKenken",
-    highlight: "https://www.youtube.com/watch?v=2NxlkTPh3W8"
+    highlight: "https://www.youtube.com/watch?v=2NxlkTPh3W8",
+    departmentId: "subOrner"
   }
 ];
