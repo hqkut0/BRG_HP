@@ -24,7 +24,7 @@ const ENGINEERS = [
     large: "uiha.png",
     youtube: "https://www.youtube.com/@seele807",
     x: "https://x.com/IQ300YukaS",
-    highlight: "https://www.youtube.com/watch?v=Twy6guiYMv0",
+    highlight: "https://www.youtube.com/watch?v=hnWD3JpLGUc",
     departmentId: "engineer"
   },
   {
