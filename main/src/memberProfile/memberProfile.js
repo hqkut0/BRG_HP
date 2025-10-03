@@ -1,5 +1,50 @@
 // memberProfile.js（置き換え用：DOMContentLoaded 内で初期化する安全な実装）
+importScriptsIfNeeded();
+
+function importScriptsIfNeeded() {
+  // streamer.jsがまだ読み込まれていない場合は読み込む
+  if (typeof STREAMERS === "undefined") {
+    const script = document.createElement("script");
+    script.src = "./streamer/streamer.js";
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // --- ストリーマー情報でHTML生成 ---
+  if (typeof STREAMERS !== "undefined") {
+    const thumbnailBar = document.querySelector('.thumbnail-bar');
+    const mainDiv = document.querySelector('.main');
+    if (thumbnailBar && mainDiv) {
+      // サムネイル生成
+      thumbnailBar.innerHTML = STREAMERS.map((s, i) =>
+        `<img src="./img/${s.img}" class="thumbnail${i === 0 ? ' active' : ''}" data-index="${i}" loading="lazy"/>`
+      ).join('');
+
+      // プロフィール生成
+      // 既存の .profile を全て削除
+      mainDiv.querySelectorAll('.profile').forEach(e => e.remove());
+      STREAMERS.forEach((s, i) => {
+        const profile = document.createElement('div');
+        profile.className = 'profile' + (i === 0 ? ' active' : '');
+        profile.innerHTML = `
+          <img src="./img/${s.img}" 
+            class="avatar"
+            data-large="./img/${s.large}"
+            data-youtube="${s.youtube || ''}"
+            ${s.twitch ? `data-twitch="${s.twitch}"` : ''}
+            data-x="${s.x || ''}"
+            data-highlight="${s.highlight || ''}"
+          />
+          <div class="name">${s.name}</div>
+          <div class="streamer"></div>
+        `;
+        mainDiv.appendChild(profile);
+      });
+    }
+  }
+
   // --- 要素取得（DOMContentLoaded 後なので安全） ---
   const profiles = Array.from(document.querySelectorAll('.profile'));
   const thumbnails = Array.from(document.querySelectorAll('.thumbnail'));
