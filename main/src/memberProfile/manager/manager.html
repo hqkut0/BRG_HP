@@ -6,6 +6,7 @@
   <title>プロフィールスライダー</title>
   <link rel="stylesheet" href="../memberProfile.css">
   <script src="../../../main.js" defer></script>
+  <script src="manager.js" defer></script>
   <script src="../memberProfile.js" defer></script>
 </head>
 <body>
@@ -14,53 +15,25 @@
     <h2>BondRingage</h2>
   </header>
 
-    <nav class="main-nav">
-        <a href="../../managementSchedule/managementSchedule.html" id="schedule"></a>
-        <a href="../../managementUser/managementUser.html" id="user"></a>
-        <a href="../../memberProfile/manager/manager.html" id="member"></a>
-    </nav>
+  <nav class="main-nav">
+    <a href="../../managementSchedule/managementSchedule.html" id="schedule"></a>
+    <a href="../../managementUser/managementUser.html" id="user"></a>
+    <a href="../../memberProfile/manager/manager.html" id="member"></a>
+  </nav>
 
-<nav class="department-nav">
-  <a href="../streamer/streamer.html" class="dept" id="dept-streamer"></a>
-  <a href="../engineer/engineer.html" class="dept" id="dept-engineer"></a>
-  <a href="../planner/planner.html" class="dept" id="dept-planner"></a>
-  <a href="../manager/manager.html" class="dept" id="dept-manager"></a>
-</nav>
+  <nav class="department-nav">
+    <a href="../streamer/streamer.html" class="dept" id="dept-streamer"></a>
+    <a href="../engineer/engineer.html" class="dept" id="dept-engineer"></a>
+    <a href="../planner/planner.html" class="dept" id="dept-planner"></a>
+    <a href="../manager/manager.html" class="dept" id="dept-manager"></a>
+  </nav>
 
-  <div class="thumbnail-bar">
-    <img src="../manager/img/hakuto_2.png" class="thumbnail active" data-index="0" loading="lazy"/>
-    <img src="../manager/img/kenken.png" class="thumbnail" data-index="1" loading="lazy"/>
-  </div>
+  <div class="thumbnail-bar"></div>
 
   <div class="main">
     <div class="nav left">&#10094;</div>
     <div class="nav right">&#10095;</div>
-
-    <div class="profile active">
-      <img src="../manager/img/hakuto_2.png" 
-          class="avatar" 
-          data-large="../manager/img/hakuto.png" 
-          data-youtube="https://www.youtube.com/@hakuto_snowlove" 
-          data-twitch="https://www.twitch.tv/hakuto_kuro_vt"
-          data-x="https://x.com/hakuto_snowlove"
-         data-highlight="https://www.youtube.com/watch?v=SO8Yd0D3GXo"         
-      />
-      <div class="name">黒岩 白兎</div>
-      <div class="orner" id="orner"></div>
-    </div>
-    
-    <div class="profile">
-      <img src="../manager/img/kenken.png" 
-          class="avatar" 
-          data-large="../manager/img/kenken.png" 
-          data-youtube="https://www.youtube.com/@ynkskenken2216" 
-          data-twitch="https://www.twitch.tv/kenken_signal"
-          data-x="https://x.com/IgrKenken"
-         data-highlight="https://www.youtube.com/watch?v=2NxlkTPh3W8"         
-      />
-      <div class="name">Kenken</div>
-      <div class="subOrner" id="subOrner"></div>
-    </div>
+    <!-- プロフィールはJSで生成 -->
   </div>
 
   <!-- モーダル -->
@@ -72,10 +45,7 @@
       <div class="modal-info">
         <div class="modal-name"></div>
         <div class="modal-department"></div>
-        <div class="modal-links">
-          <!-- ここにJSでリンクが生成される -->
-        </div>
-        <!-- ハイライト動画埋め込み -->
+        <div class="modal-links"></div>
         <div class="modal-highlight">
           <iframe src="" frameborder="0"
             title="ハイライト動画"
@@ -86,6 +56,5 @@
       </div>
     </div>
   </div>
-
 </body>
 </html>
